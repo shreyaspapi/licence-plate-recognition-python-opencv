@@ -17,7 +17,9 @@ SCALAR_RED = (0.0, 0.0, 255.0)
 showSteps = False
 
 def video_feed(video_input):
+    print(video_input)
     cap = cv2.VideoCapture(video_input)
+    # cap = video_input
     # Trained XML classifiers describes some features of some object we want to detect
     car_cascade = cv2.CascadeClassifier('cars.xml')
     # loop runs if capturing has been initialized.
@@ -31,16 +33,17 @@ def video_feed(video_input):
         # To draw a rectangle in each cars
         for (x,y,w,h) in cars:
             cv2.rectangle(frames,(x,y),(x+w,y+h),(0,0,255),2)
-        # cv2.imshow('video2',frames)
+        cv2.imshow('video2',frames)
         car = frames[y:y+h, x:x+h]
-        #FileName = "Path/cars_" + str(y) + ".jpg"
-        #cv2.imwrite(FileName,car)
+        FileName = "cars_" + str(y) + ".jpg"
+        cars = cv2.imwrite(FileName,car)
         # Wait for Esc key to stop
         if cv2.waitKey(33) == 27:
             break
     # De-allocate any associated memory usage
-    cv2.destroyAllWindows()
-    return(car)
+    # cv2.destroyAllWindows()
+    # print(car)
+    return(FileName)
 
 def main():
 
@@ -51,8 +54,9 @@ def main():
         return                                                          # and exit program
     # end if
 
-    video_input = "video.mp4"
-    imgOriginalScene  = cv2.imread(video_feed(video_input)[0])               # open image
+    video_input = "video1.mp4"
+    
+    imgOriginalScene  = cv2.imread("gg.jpg")               # open image
 
     if imgOriginalScene is None:                            # if image was not read successfully
         print("\nerror: image not read from file \n\n")  # print error message to std out
