@@ -15,8 +15,8 @@
 
 ![](DocsAndPresentation/DetailedImages/Picture1.png)
 ![alt text](DocsAndPresentation/DetailedImages/Picture2.png)
-![alt text](DetailedImages/Picture3.png)
-![alt text](DetailedImages/Picture4.png)
-![alt text](DetailedImages/Picture5.png)
-![alt text](DetailedImages/Picture6.png)
-![alt text](DetailedImages/Picture7.png)
+![alt text](DocsAndPresentation/DetailedImages/Picture3.png)
+![alt text](DocsAndPresentation/DetailedImages/Picture4.png)
+![alt text](DocsAndPresentation/DetailedImages/Picture5.png)
+![alt text](DocsAndPresentation/DetailedImages/Picture6.png)
+![alt text](DocsAndPresentation/DetailedImages/Picture7.png)
