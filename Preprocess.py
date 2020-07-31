@@ -53,9 +53,7 @@ def maximizeContrast(imgGrayscale):
     imgBlackHat = cv2.morphologyEx(imgGrayscale, cv2.MORPH_BLACKHAT, structuringElement)
 
     imgGrayscalePlusTopHat = cv2.add(imgGrayscale, imgTopHat)
-    imgGrayscalePlusTopHatMinusBlackHat = cv2.subtract(imgGrayscalePlusTopHat, imgBlackHat)
-
-    return imgGrayscalePlusTopHatMinusBlackHat
+    return cv2.subtract(imgGrayscalePlusTopHat, imgBlackHat)
 # end function
 
 

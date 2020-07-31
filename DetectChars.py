@@ -253,12 +253,13 @@ def findPossibleCharsInPlate(imgGrayscale, imgThresh):
 def checkIfPossibleChar(possibleChar):
             # this function is a 'first pass' that does a rough check on a contour to see if it could be a char,
             # note that we are not (yet) comparing the char to other chars to look for a group
-    if (possibleChar.intBoundingRectArea > MIN_PIXEL_AREA and
-        possibleChar.intBoundingRectWidth > MIN_PIXEL_WIDTH and possibleChar.intBoundingRectHeight > MIN_PIXEL_HEIGHT and
-        MIN_ASPECT_RATIO < possibleChar.fltAspectRatio and possibleChar.fltAspectRatio < MAX_ASPECT_RATIO):
-        return True
-    else:
-        return False
+    return (
+        possibleChar.intBoundingRectArea > MIN_PIXEL_AREA
+        and possibleChar.intBoundingRectWidth > MIN_PIXEL_WIDTH
+        and possibleChar.intBoundingRectHeight > MIN_PIXEL_HEIGHT
+        and MIN_ASPECT_RATIO < possibleChar.fltAspectRatio
+        and possibleChar.fltAspectRatio < MAX_ASPECT_RATIO
+    )
     # end if
 # end function
 
